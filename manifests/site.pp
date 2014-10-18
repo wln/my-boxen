@@ -93,4 +93,15 @@ node default {
 
   include java
 
+  # Git config
+
+  git::config::global { 'alias.st': value => 'status' }
+  git::config::global { 'alias.ci': value => 'commit' }
+  git::config::global { 'alias.co': value => 'checkout' }
+  git::config::global { 'alias.br': value => 'branch' }
+  git::config::global { 'alias.lg': value => 'log --graph --pretty=format:\'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset\' --abbrev-commit' }
+  git::config::global { 'color.ui': value => 'auto' }
+  git::config::global { 'push.default': value => 'simple' }
+
+
 }
