@@ -143,6 +143,20 @@ node default {
             install_options => ['--appdir=/Applications'],
   }
   
+  # fonts
+
+  homebrew::tap { 'caskroom/fonts': }
+  ->
+  package { [ 'font-input',
+              'font-source-code-pro',
+              'font-source-sans-pro',
+              'font-source-serif-pro',
+            ]:
+            provider => 'brewcask',
+
+  }
+
+
   # platforms
 
   include heroku
