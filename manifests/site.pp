@@ -88,4 +88,9 @@ node default {
     ensure => link,
     target => $boxen::config::repodir
   }
+
+  ### LOCAL ADDITIONS
+
+  include java
+
 }
