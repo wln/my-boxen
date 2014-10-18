@@ -124,6 +124,8 @@ node default {
 
   include brewcask
   package { 'atom': provider => 'brewcask', install_options => ['--appdir=/Applications'], }
+  package { 'dropbox': provider => 'brewcask', install_options => ['--appdir=/Applications'], }
+  package { 'onepassword': provider => 'brewcask', install_options => ['--appdir=/Applications'], }
 
   # platforms
 
