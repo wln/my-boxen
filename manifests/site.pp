@@ -103,6 +103,15 @@ node default {
   git::config::global { 'color.ui': value => 'auto' }
   git::config::global { 'push.default': value => 'simple' }
 
+  package {
+    [
+      'class-dump',
+      'libxml2',
+      'markdown',
+      'wget'
+    ]:
+  }
+
   # brewcasks
 
   file { "/usr/local": ensure => "directory", before => Package['atom'] }
