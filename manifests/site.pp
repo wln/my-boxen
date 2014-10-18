@@ -123,9 +123,13 @@ node default {
   file { "/usr/local": ensure => "directory", before => Package['atom'] }
 
   include brewcask
+  package { 'arq': provider => 'brewcask', install_options => ['--appdir=/Applications'], }
   package { 'atom': provider => 'brewcask', install_options => ['--appdir=/Applications'], }
   package { 'dropbox': provider => 'brewcask', install_options => ['--appdir=/Applications'], }
+  package { 'istat-menus': provider => 'brewcask', install_options => ['--appdir=/Applications'], }
   package { 'onepassword': provider => 'brewcask', install_options => ['--appdir=/Applications'], }
+  package { 'transmit': provider => 'brewcask', install_options => ['--appdir=/Applications'], }
+  package { 'vmware-fusion': provider => 'brewcask', install_options => ['--appdir=/Applications'], }
 
   # platforms
 
