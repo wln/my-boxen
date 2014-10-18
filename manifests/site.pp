@@ -124,5 +124,11 @@ node default {
   # platforms
 
   include heroku
+  package { 'awscli': }
+  ruby_gem { 'tugboat for 2.1.2 ruby': 
+    gem => 'tugboat',
+    version => '>= 0.2.0',
+    ruby_version => '2.1.2',
+  }
 
 }
