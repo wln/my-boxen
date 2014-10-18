@@ -119,4 +119,8 @@ node default {
   include brewcask
   package { 'atom': provider => 'brewcask', install_options => ['--appdir=/Applications'], }
 
+  # platforms
+
+  include heroku
+
 }
