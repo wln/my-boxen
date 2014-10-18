@@ -91,6 +91,8 @@ node default {
 
   ### LOCAL ADDITIONS
 
+  class { 'ruby::global': version => '2.1.2' }
+
   include java
 
   # Git config
