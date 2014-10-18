@@ -144,6 +144,7 @@ node default {
               'evernote',
               'istat-menus',
               'onepassword',
+              'sourcetree',
               'transmit',
               'vmware-fusion' ]:
             provider => 'brewcask',
