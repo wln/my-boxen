@@ -129,20 +129,25 @@ node default {
   file { "/usr/local": ensure => "directory", before => Package['atom'] }
 
   include brewcask
-  package { 'arq': provider => 'brewcask', install_options => ['--appdir=/Applications'], }
-  package { 'atom': provider => 'brewcask', install_options => ['--appdir=/Applications'], }
-  package { 'boom-recorder': provider => 'brewcask', install_options => ['--appdir=/Applications'], }
-  package { 'dropbox': provider => 'brewcask', install_options => ['--appdir=/Applications'], }
-  package { 'istat-menus': provider => 'brewcask', install_options => ['--appdir=/Applications'], }
-  package { 'onepassword': provider => 'brewcask', install_options => ['--appdir=/Applications'], }
-  package { 'transmit': provider => 'brewcask', install_options => ['--appdir=/Applications'], }
-  package { 'vmware-fusion': provider => 'brewcask', install_options => ['--appdir=/Applications'], }
 
+  package { [ 'arq',
+              'atom',
+              'boom-recorder',
+              'dropbox',
+              'evernote',
+              'istat-menus',
+              'onepassword',
+              'transmit',
+              'vmware-fusion' ]:
+            provider => 'brewcask',
+            install_options => ['--appdir=/Applications'],
+  }
+  
   # platforms
 
   include heroku
   package { 'awscli': }
-  ruby_gem { 'tugboat for 2.1.2 ruby': 
+  ruby_gem { 'tugboat for 2.1.2 ruby':
     gem => 'tugboat',
     version => '>= 0.2.0',
     ruby_version => '2.1.2',
