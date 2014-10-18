@@ -103,5 +103,11 @@ node default {
   git::config::global { 'color.ui': value => 'auto' }
   git::config::global { 'push.default': value => 'simple' }
 
+  # brewcasks
+
+  file { "/usr/local": ensure => "directory", before => Package['atom'] }
+
+  include brewcask
+  package { 'atom': provider => 'brewcask', install_options => ['--appdir=/Applications'], }
 
 }
