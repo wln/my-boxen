@@ -109,6 +109,8 @@ node default {
   git::config::global { 'color.ui': value => 'auto' }
   git::config::global { 'push.default': value => 'simple' }
 
+  # packages
+
   package {
     [
       'class-dump',
@@ -117,6 +119,10 @@ node default {
       'wget'
     ]:
   }
+
+  # misc apps
+
+  include chrome::dev
 
   # brewcasks
 
