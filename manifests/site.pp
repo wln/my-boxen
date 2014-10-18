@@ -49,6 +49,14 @@ Service {
   provider => ghlaunchd
 }
 
+define atom_module ($apm_mod = $title) {
+  exec { "atom_module $apm_mod":
+    require => Package['atom'],
+    command => "/usr/local/bin/apm install $apm_mod",
+    creates => "/Users/${::boxen_user}/.atom/packages/$apm_mod"
+  }
+}
+
 Homebrew::Formula <| |> -> Package <| |>
 
 node default {
@@ -131,7 +139,6 @@ node default {
   include brewcask
 
   package { [ 'arq',
-              'atom',
               'boom-recorder',
               'dropbox',
               'evernote',
@@ -142,7 +149,16 @@ node default {
             provider => 'brewcask',
             install_options => ['--appdir=/Applications'],
   }
-  
+
+  # atom & its packages
+
+  package { 'atom':
+            provider => 'brewcask',
+            install_options => ['--appdir=/Applications'],
+  }
+
+  atom_module { 'language-puppet': }
+
   # fonts
 
   homebrew::tap { 'caskroom/fonts': }
