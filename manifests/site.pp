@@ -158,7 +158,15 @@ node default {
             install_options => ['--appdir=/Applications'],
   }
 
-  atom_module { 'language-puppet': }
+  atom_module { [ 'language-puppet',
+                  'ember-cli-helper',
+                  'ember-snippets',
+                  'language-emblem',
+                  'autocomplete-plus',
+                  'autocomplete-paths',
+                  'autocomplete-snippets'
+                ]:
+  }
 
   # fonts
 
