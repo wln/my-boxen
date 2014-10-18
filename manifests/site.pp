@@ -95,6 +95,10 @@ node default {
 
   include java
 
+  # Databases
+
+  include redis
+
   # Git config
 
   git::config::global { 'alias.st': value => 'status' }
