@@ -142,6 +142,7 @@ node default {
               'boom-recorder',
               'dropbox',
               'evernote',
+              'flux',
               'istat-menus',
               'onepassword',
               'sourcetree',
