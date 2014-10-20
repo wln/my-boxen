@@ -106,6 +106,7 @@ node default {
   # Databases
 
   include redis
+  include postgresql
 
   # Git config
 

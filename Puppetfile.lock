@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/boxen/puppet-postgresql
+  ref: 2.2.4
+  sha: 39fa57e149c66e77049f79277d2ba79ed0c5a60f
+  specs:
+    postgresql (0.0.1)
+
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
@@ -143,6 +150,7 @@ DEPENDENCIES
   openssl (= 1.0.0)
   phantomjs (= 2.3.0)
   pkgconfig (= 1.0.0)
+  postgresql (>= 0)
   redis (= 3.1.0)
   repository (= 2.3.0)
   ruby (= 8.1.4)
