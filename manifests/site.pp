@@ -135,7 +135,7 @@ node default {
 
   # brewcasks
 
-  file { "/usr/local": ensure => "directory", before => Package['atom'] }
+  file { "/usr/local": ensure => "directory", before => [Package['atom'], Package['sourcetree']] }
 
   include brewcask
 
