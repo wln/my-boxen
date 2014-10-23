@@ -201,4 +201,12 @@ node default {
     ruby_version => '2.1.2',
   }
 
+  # gems
+
+  ruby_gem { 'bundler for rubies':
+    gem => 'bundler',
+    version => '>= 1.7.4',
+    ruby_version => '*'
+  }
+
 }
