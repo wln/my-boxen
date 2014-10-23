@@ -152,6 +152,7 @@ node default {
               'omnioutliner',
               'omnipresence',
               'onepassword',
+              'skype',
               'sourcetree',
               'transmit',
               'vmware-fusion' ]:
