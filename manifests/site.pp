@@ -139,7 +139,8 @@ node default {
 
   include brewcask
 
-  package { [ 'arq',
+  package { [ 'amazon-music',
+              'arq',
               'boom-recorder',
               'dropbox',
               'evernote',
